@@ -24,20 +24,19 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className="font-body">
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-		  style={{
-			height:"100vh",
-            margin: 0,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-		  }}
-		  className="bg-darkbg text-right"
-        >
-          <main>{children}</main>
-	    </div>
+		<div className="font-body flex flex-col md:flex-row w-screen">
+			<Header />
+			<div
+			  style={{
+				height:"100vh",
+				margin: 0,
+				padding: `0px 1.0875rem 1.45rem`,
+				paddingTop: 0,
+			  }}
+			  className="bg-darkbg text-right flex-grow"
+			>
+				  <main>{children}</main>
+			</div>
       </div>
     )}
   />

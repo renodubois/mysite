@@ -12,7 +12,7 @@ import twitterLogo from "../images/twitter_logo.svg"
 const Header = ({ siteTitle }) => {
 	const [menuExpanded, setMenuExpanded] = useState(false);
 	let topIcon = (
-		<div className="text-right cursor-pointer select-none h-6 w-6 pt-2" onClick={() => setMenuExpanded(true)}>
+		<div className="text-right cursor-pointer select-none h-6 w-6 pt-2 md:invisible" onClick={() => setMenuExpanded(true)}>
 			<img src={menu} alt="Open menu" />	
 		</div>
 	);
@@ -20,11 +20,13 @@ const Header = ({ siteTitle }) => {
 		"flex",
 		"flex-row",
 		"justify-between",
+		"md:text-right",
+		"md:flex-row-reverse",
 		"mb-2",
 	];
 	if (menuExpanded) {
 		topIcon = (
-			<div className="text-right cursor-pointer select-none h-5 w-5 pt-2" onClick={() => setMenuExpanded(false)}>
+			<div className="text-right cursor-pointer select-none h-5 w-5 pt-2 md:invisible" onClick={() => setMenuExpanded(false)}>
 				<img src={cross} alt="White cross, closes mobile menu" />	
 			</div>
 		);
@@ -49,9 +51,9 @@ const Header = ({ siteTitle }) => {
 		)
 	}
 	return (
-		<header className="bg-blue-600 p-4">
+		<header className="bg-header-bg p-4 md:flex md:flex-col md:justify-center">
 			{topSection}
-			<div className="ml-3 text-xl text-white">
+			<div className="ml-3 text-xl text-white md:text-right">
 				<div className="m-2 ml-0">
 					<Link to="/about">
 							<span className="nav-item-text">about</span>
