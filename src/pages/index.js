@@ -1,7 +1,6 @@
 import React from "react"
 
 import '../index.tailwind.css';
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import picOfMe from "../images/me.jpg"
 // Image imports for the social buttons 
@@ -27,7 +26,7 @@ buttonClasses = buttonClasses.join(" ");
 // ,	figure out how to add extra text sizes (we need something like a 7 or 8 xl)
 // ,	figure out how to get the grey bg to extend down the bottom of the page when it's on mobile
 const IndexPage = () => (
-	<Layout>
+	<>
 		<SEO title="Home" />
 		<div className="md:flex md:flex-col md:justify-center md:">
 			<div className="md:block flex flex-row justify-end pt-6 pl-6">
@@ -53,7 +52,7 @@ const IndexPage = () => (
 				</a>
 			</div>
 		</div>
-	</Layout>
+	</>
 )
 
 export default IndexPage

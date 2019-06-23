@@ -12,7 +12,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => (
+const Layout = ({ children, expandByDefault }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -25,7 +25,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
 		<div className="font-body flex flex-col md:flex-row w-screen">
-			<Header />
+			<Header expandByDefault={expandByDefault} />
 			<div
 			  style={{
 				height:"100vh",
@@ -33,9 +33,9 @@ const Layout = ({ children }) => (
 				padding: `0px 1.0875rem 1.45rem`,
 				paddingTop: 0,
 			  }}
-			  className="bg-darkbg text-right flex-grow"
+			  className="bg-darkbg text-right flex-grow md:justify-center"
 			>
-				  <main>{children}</main>
+				  <main className="md:flex md:justify-center md:flex-col" style={{height:"100%"}}>{children}</main>
 			</div>
       </div>
     )}
@@ -43,7 +43,8 @@ const Layout = ({ children }) => (
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+	children: PropTypes.node.isRequired,
+	expandByDefault: PropTypes.bool
 }
 
 export default Layout
