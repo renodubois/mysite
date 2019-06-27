@@ -1,6 +1,6 @@
 // TODO: clean this file up and remove the large amounts of duplicated code that we have here
 // TODO: make it so that the menu will always be collapsed when the screen gets shrunk
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -62,6 +62,9 @@ const LargeNav = () => {
 				<a className="social-media-icon twitter" href="https://twitter.com/RenoInMO">
 					<img className="w-6 m-2" src={twitterLogo} alt="Twitter Logo" />
 				</a>
+				<a className="social-media-icon discord" href="https://discord.gg/notarealcode">
+					<img className="w-6 m-2" src={twitterLogo} alt="Discord Logo" />
+				</a>
 			</div>
 		</header>
 	)
@@ -86,6 +89,12 @@ class Header extends React.Component {
 
 	componentDidMount () {
 		window.addEventListener("resize", this.handleResize);
+	}
+
+	navigateToPage = (event, to) => {
+		event.preventDefault();
+		this.setState({ menuExpanded: false });
+		navigate(to);
 	}
 
 	setMenuExpanded = (value) => {
@@ -120,9 +129,9 @@ class Header extends React.Component {
 		
 		const topSection = (
 			<div className={topSectionClasses.join(" ")}>
-				<Link to="/" className="text-header-title no-underline text-3xl font-header font-black pt-1">
+				<div className="text-header-title no-underline text-3xl font-header font-black pt-1 cursor-pointer" onClick={(e) => this.navigateToPage(e , "/")}>
 						RenoInMO
-				</Link>
+				</div>
 				{topIcon}
 			</div>
 		);
@@ -143,24 +152,24 @@ class Header extends React.Component {
 					{topSection}
 					<div className="ml-3 text-xl text-white md:text-right">
 						<div className="m-2 ml-0">
-							<Link to="/about">
+							<div className="cursor-pointer" onClick={(e) => this.navigateToPage(e , "/about")}>
 									<span className="nav-item-text">about</span>
-							</Link>
+							</div>
 						</div>
 						<div className="m-2 ml-0">
-							<Link to="/projects">
+							<div className="cursor-pointer" onClick={(e) => this.navigateToPage(e , "/projects")}>
 									<span className="nav-item-text">projects</span>
-							</Link>
+							</div>
 						</div>
 						<div className="m-2 ml-0">
-							<Link to="/schedule">
+							<div className="cursor-pointer" onClick={(e) => this.navigateToPage(e , "/schedule")}>
 									<span className="nav-item-text">schedule</span>
-							</Link>
+							</div>
 						</div>
 						<div className="m-2 ml-0">
-							<Link to="/contact">
+							<div className="cursor-pointer" onClick={(e) => this.navigateToPage(e , "/contact")}>
 									<span className="nav-item-text">contact</span>
-							</Link>
+							</div>
 						</div>
 						<a className="social-media-icon twitch" href="https://twitch.tv/RenoInMO">
 							<img className="w-6 m-2 ml-0" src={twitchLogo} alt="Twitch.tv Logo" />
