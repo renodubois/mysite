@@ -24,16 +24,14 @@ const Layout = ({ children, expandByDefault }) => (
       }
     `}
     render={data => (
-		<div className="font-body flex flex-col md:flex-row w-screen">
+		<div className="font-body flex flex-col md:flex-row w-screen text-white">
 			<Header expandByDefault={expandByDefault} />
 			<div
 			  style={{
 				height:"100vh",
 				margin: 0,
-				padding: `0px 1.0875rem 1.45rem`,
-				paddingTop: 0,
 			  }}
-			  className="bg-darkbg text-right flex-grow md:justify-center"
+			  className="bg-darkbg md:text-right flex-grow md:justify-center pt-6 md:pt-0 p-6"
 			>
 				  <main className="md:flex md:justify-center md:flex-col" style={{height:"100%"}}>{children}</main>
 			</div>
