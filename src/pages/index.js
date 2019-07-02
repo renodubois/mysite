@@ -51,7 +51,7 @@ const IndexPage = () => (
 					Twitter	
 					<div />
 				</a>
-				<a className={buttonClasses + " bg-discord"} href="https://discord.gg/notarealcode">
+				<a className={buttonClasses + " bg-discord"} href="https://discord.gg/nqmGyts">
 					<img className="w-8 h-8 md:w-6 md:h-6 md:mr-4 md:ml-1 mb-0" src={discordLogo} alt="Twitter Logo" />
 					Discord	
 					<div />

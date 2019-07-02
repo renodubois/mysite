@@ -63,7 +63,7 @@ const LargeNav = () => {
 					<a className="social-media-icon twitter" href="https://twitter.com/RenoInMO">
 						<img className="w-6 m-2" src={twitterLogo} alt="Twitter Logo" />
 					</a>
-					<a className="social-media-icon discord" href="https://discord.gg/notarealcode">
+					<a className="social-media-icon discord" href="https://discord.gg/nqmGyts">
 						<img className="w-6 m-2" src={discordLogo} alt="Discord Logo" />
 					</a>
 				</div>
@@ -183,7 +183,7 @@ class Header extends React.Component {
 						<a className="social-media-icon twitter" href="https://twitter.com/RenoInMO">
 							<img className="w-6 m-2" src={twitterLogo} alt="Twitter Logo" />
 						</a>
-						<a className="social-media-icon discord" href="https://discord.gg/notarealcode">
+						<a className="social-media-icon discord" href="https://discord.gg/nqmGyts">
 							<img className="w-6 m-2" src={discordLogo} alt="Discord Logo" />
 						</a>
 					</div>
