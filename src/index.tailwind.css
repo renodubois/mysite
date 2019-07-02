@@ -2,6 +2,16 @@
 @tailwind utilities;
 
 a {
+	color: #0984E3;
+}
+
+/* TODO: can this be combined into one rule? */
+a.social-media-button {
+	color:white;
 	text-decoration: none;
+}
+
+a.nav-link {
 	color: white;
+	text-decoration: none;
 }

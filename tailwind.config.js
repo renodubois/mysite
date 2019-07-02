@@ -11,6 +11,7 @@ module.exports = {
 				'header-bg': "#0984E3",
 				twitch: "#5E449E",
 				github: "#24282D",
+				discord: "#5468b7",
 				darkbg: "#2D3436",
 			}
 		}

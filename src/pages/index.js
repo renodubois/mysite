@@ -7,8 +7,11 @@ import picOfMe from "../images/me.jpg"
 import twitchLogo from "../images/twitch_logo.svg"
 import githubLogo from "../images/github_logo.svg"
 import twitterLogo from "../images/twitter_logo.svg"
+import discordLogo from "../images/discord_logo.svg"
+
 
 let buttonClasses = [
+	"social-media-button",
 	"flex",
 	"items-center",
 	"justify-between",
@@ -22,9 +25,7 @@ let buttonClasses = [
 	"tracking-wider",
 ];
 buttonClasses = buttonClasses.join(" ");
-// TODO: figure out why the justify stuff isn't working on content block
-// ,	figure out how to add extra text sizes (we need something like a 7 or 8 xl)
-// ,	figure out how to get the grey bg to extend down the bottom of the page when it's on mobile
+// TODO: figure out how to add extra text sizes (we need something like a 7 or 8 xl)
 const IndexPage = () => (
 	<>
 		<SEO title="Home" />
@@ -50,6 +51,12 @@ const IndexPage = () => (
 					Twitter	
 					<div />
 				</a>
+				<a className={buttonClasses + " bg-discord"} href="https://discord.gg/notarealcode">
+					<img className="w-8 h-8 md:w-6 md:h-6 md:mr-4 md:ml-1 mb-0" src={discordLogo} alt="Twitter Logo" />
+					Discord	
+					<div />
+				</a>
+
 			</div>
 		</div>
 	</>

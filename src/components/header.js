@@ -1,5 +1,4 @@
 // TODO: clean this file up and remove the large amounts of duplicated code that we have here
-// TODO: make it so that the menu will always be collapsed when the screen gets shrunk
 import { Link, navigate } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
@@ -10,6 +9,7 @@ import menu from "../images/menu.svg";
 import twitchLogo from "../images/twitch_logo.svg"
 import githubLogo from "../images/github_logo.svg"
 import twitterLogo from "../images/twitter_logo.svg"
+import discordLogo from "../images/discord_logo.svg"
 
 import { getWindowSize } from "../getWindowSize";
 
@@ -34,37 +34,39 @@ const LargeNav = () => {
 			{topSection}
 			<div className="ml-3 text-xl text-white md:text-right">
 				<div className="m-2 ml-0">
-					<Link to="/about">
+					<Link className="nav-link" to="/about">
 							<span className="nav-item-text">about</span>
 					</Link>
 				</div>
 				<div className="m-2 ml-0">
-					<Link to="/projects">
+					<Link className="nav-link" to="/projects">
 							<span className="nav-item-text">projects</span>
 					</Link>
 				</div>
 				<div className="m-2 ml-0">
-					<Link to="/schedule">
+					<Link className="nav-link" to="/schedule">
 							<span className="nav-item-text">schedule</span>
 					</Link>
 				</div>
 				<div className="m-2 ml-0">
-					<Link to="/contact">
+					<Link className="nav-link" to="/contact">
 							<span className="nav-item-text">contact</span>
 					</Link>
 				</div>
-				<a className="social-media-icon twitch" href="https://twitch.tv/RenoInMO">
-					<img className="w-6 m-2 ml-0" src={twitchLogo} alt="Twitch.tv Logo" />
-				</a>
-				<a className="social-media-icon twitch" href="https://github.com/renodubois">
-					<img className="w-6 m-2" src={githubLogo} alt="GitHub Logo" />
-				</a>
-				<a className="social-media-icon twitter" href="https://twitter.com/RenoInMO">
-					<img className="w-6 m-2" src={twitterLogo} alt="Twitter Logo" />
-				</a>
-				<a className="social-media-icon discord" href="https://discord.gg/notarealcode">
-					<img className="w-6 m-2" src={twitterLogo} alt="Discord Logo" />
-				</a>
+				<div className="flex">
+					<a className="social-media-icon twitch" href="https://twitch.tv/RenoInMO">
+						<img className="w-6 m-2 ml-0" src={twitchLogo} alt="Twitch.tv Logo" />
+					</a>
+					<a className="social-media-icon twitch" href="https://github.com/renodubois">
+						<img className="w-6 m-2" src={githubLogo} alt="GitHub Logo" />
+					</a>
+					<a className="social-media-icon twitter" href="https://twitter.com/RenoInMO">
+						<img className="w-6 m-2" src={twitterLogo} alt="Twitter Logo" />
+					</a>
+					<a className="social-media-icon discord" href="https://discord.gg/notarealcode">
+						<img className="w-6 m-2" src={discordLogo} alt="Discord Logo" />
+					</a>
+				</div>
 			</div>
 		</header>
 	)
@@ -103,6 +105,7 @@ class Header extends React.Component {
 
 	render () {
 		const { menuExpanded } = this.state;
+		// TODO: change this to a button, not a div
 		let topIcon = (
 			<div className="text-right cursor-pointer select-none h-6 w-6 pt-2 md:invisible" onClick={() => this.setMenuExpanded(true)}>
 				<img src={menu} alt="Open menu" />	
@@ -179,6 +182,9 @@ class Header extends React.Component {
 						</a>
 						<a className="social-media-icon twitter" href="https://twitter.com/RenoInMO">
 							<img className="w-6 m-2" src={twitterLogo} alt="Twitter Logo" />
+						</a>
+						<a className="social-media-icon discord" href="https://discord.gg/notarealcode">
+							<img className="w-6 m-2" src={discordLogo} alt="Discord Logo" />
 						</a>
 					</div>
 				</header>
