@@ -7,7 +7,7 @@ const Contact = ({ siteTitle }) => {
 	const paraClasses = [];
 	return (
 		<PageLayout marginWidth="1/2">
-			<h1 className="font-header">Contact Me</h1>
+			<h1 className="font-header text-header-bg md:text-6xl text-5xl">Contact Me</h1>
 			<p className={paraClasses.join(" ")}>
 				Any official inquries should be sent via email to <a href="mailto:renoinmo@gmail.com">renoinmo@gmail.com</a>.
 			</p>

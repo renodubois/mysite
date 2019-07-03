@@ -3,8 +3,8 @@ import React from "react";
 const Schedule = ({ siteTitle }) => {
 	return (
 		<>
-			<h1 className="font-header">Stream Schedule</h1>	
-			<p>
+			<h1 className="font-header text-header-bg md:text-6xl text-4xl">Stream Schedule</h1>	
+			<p className="font-black text-lg">
 				The stream is usually live on Monday, Wednesday, and Thursday nights starting at 7PM CST (UTC-5).
 			</p>
 			<p className="md:ml-24">

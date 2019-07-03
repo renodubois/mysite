@@ -4,6 +4,9 @@ module.exports = {
 			header: ['"Fira Sans"'],
 			body: ['"Noticia Text"'],
 		},
+		screens: {
+			md: "801px"
+		},
 		extend: {
 			colors: {
 				twitter: "#49A0EB",

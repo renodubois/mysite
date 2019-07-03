@@ -19,11 +19,11 @@ const About = ({ siteTitle }) => {
 				<li>Smart Home/Home Automation (HomeAssistant, self-hosted automation)</li>
 				<li>Hardware Projects (Arduinos, RPi projects, also very inexperienced here)</li>
 			</ul>
-			<h5 className="font-header">
+			<h4 className="font-header">
 				To find out what I'm up to currently,
 				{" "}<a className="underline text-header-bg" href="https://twitter.com/RenoInMO">follow me on Twitter</a>,{" "}
 				where I post about new content and interesting tech stuff.
-			</h5>
+			</h4>
 
 		</PageLayout>
 	);

@@ -13,7 +13,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes}>
+      <body {...props.bodyAttributes} className="bg-darkbg">
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           Non-JS version coming soon!

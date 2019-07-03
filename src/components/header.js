@@ -30,7 +30,7 @@ const LargeNav = () => {
 		</div>
 	);
 	return (
-		<header className="bg-header-bg p-4 md:flex md:flex-col md:justify-center md:pl-12 hidden md:block">
+		<header className="bg-header-bg p-4 md:flex md:flex-col md:justify-center md:absolute md:h-screen md:w-2/12 hidden">
 			{topSection}
 			<div className="ml-3 text-xl text-white md:text-right">
 				<div className="m-2 ml-0">
@@ -53,7 +53,7 @@ const LargeNav = () => {
 							<span className="nav-item-text">contact</span>
 					</Link>
 				</div>
-				<div className="flex">
+				<div className="flex justify-end">
 					<a className="social-media-icon twitch" href="https://twitch.tv/RenoInMO">
 						<img className="w-6 m-2 ml-0" src={twitchLogo} alt="Twitch.tv Logo" />
 					</a>
