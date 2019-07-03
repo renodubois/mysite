@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
+    "pre-push": "^0.1.1",
     "prettier": "^1.17.1",
     "tailwindcss": "^1.0.2"
   },
@@ -45,5 +46,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "pre-push": [
+	  "deploy"
+  ]
 }
