@@ -5,7 +5,7 @@ const Schedule = ({ siteTitle }) => {
 		<>
 			<h1 className="font-header text-header-bg md:text-6xl text-4xl">Stream Schedule</h1>	
 			<p className="font-black text-lg">
-				The stream is usually live on Monday, Wednesday, and Thursday nights starting at 7PM CST (UTC-5).
+				The stream is live every Sunday at 1:30PM EST/10:30AM PST. We will usually be live for about 3 to 4 hours from that start time!
 			</p>
 			<p className="md:ml-24">
 				Occasionally, streams will be held on non-scheduled days, delayed or even cancelled. I will post on Twitter and Discord whenever that happens,
