@@ -48,6 +48,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "pre-push": [
-	  "deploy"
+    "deploy"
   ]
 }
